@@ -132,6 +132,7 @@ a {
 
 .logo {
   font: var(--middle-high-font);
+  line-height: 1;
 }
 
 .cart {
@@ -160,5 +161,22 @@ a {
     font: var(--small-high-font);
     color: var(--color-light);
     background-color: var(--color-accent);
+  }
+}
+
+.btn {
+  font: var(--small-high-font);
+  padding: 22px 47px;
+  border-radius: 4px;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  &--primary {
+    color: var(--color-light);
+    background-color: var(--color-accent);
+    &:hover {
+      background-color: var(--color-accent-hover);
+    }
+    &:active {
+      background-color: var(--color-accent-active);
+    }
   }
 }

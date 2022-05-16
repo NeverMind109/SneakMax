@@ -8,13 +8,19 @@
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
   --grid-gap: 20px;
   --main-offset: 40px;
+  --second-offset: 20px;
 
   // colors
   --color-light: #fff;
   --color-eastbay: #484283;
   --color-accent: #f14f4f;
+  --color-accent-hover: #cc4949;
+  --color-accent-active: #8c2828;
+  --color-border: rgba(255, 255, 255, 0.5);
+  --color-bombay: #b2b5bb;
 
   // fonts
   --middle-high-font: 700 30px / 140% var(--font-family);
+  --middle-font: 400 16px / 140% var(--font-family);
   --small-high-font: 400 14px / 140% var(--font-family);
 }
