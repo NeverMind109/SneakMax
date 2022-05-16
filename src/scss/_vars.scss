@@ -2,11 +2,19 @@
 // colors
 :root {
   // base
-  --font-family: "Open Sans", sans-serif;
-  --content-width: 1170px;
+  --font-family: "Intro", sans-serif;
+  --content-width: 1180px;
   --container-offset: 15px;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+  --grid-gap: 20px;
+  --main-offset: 40px;
 
   // colors
   --color-light: #fff;
+  --color-eastbay: #484283;
+  --color-accent: #f14f4f;
+
+  // fonts
+  --middle-high-font: 700 30px / 140% var(--font-family);
+  --small-high-font: 400 14px / 140% var(--font-family);
 }

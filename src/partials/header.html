@@ -1,3 +1,42 @@
 <header class="header">
-  <div class="container"></div>
+  <div class="container header__container grid">
+    <div class="header__left">
+      <a class="logo header__logo">SneakMax</a>
+    </div>
+    <div class="header__right">
+      <nav class="nav header__nav" title="Навигация">
+        <ul class="list-reset nav__list">
+          <li class="nav__item">
+            <a class="nav__link" href="#">Каталог</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">О нас</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">Подбор товара</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">Наша команда</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">Доставка и оплата</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">Контакты</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">Корзина</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="cart header__cart">
+        <button class="btn-reset cart__btn">
+          <svg>
+            <use xlink:href="img/sprite.svg#cart"></use>
+          </svg>
+          <div class="cart__count">1</div>
+        </button>
+      </div>
+    </div>
+  </div>
 </header>
