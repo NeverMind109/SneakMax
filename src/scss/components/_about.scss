@@ -1,0 +1,77 @@
+.about {
+  position: relative;
+  height: 580px;
+  overflow: hidden;
+  background-color: var(--color-eastbay);
+  &__container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+  &__figure {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  &__text {
+    width: 34%;
+    transform: translateY(70px);
+  }
+  &__title {
+    color: var(--color-light);
+    margin-bottom: var(--second-offset);
+  }
+  &__descr {
+    font: var(--middle-font);
+    font-family: "introBook", sans-serif;
+    color: var(--color-light);
+  }
+  &__quote {
+    display: inline-block;
+    font: inherit;
+    font-family: "introBook", sans-serif;
+    margin-bottom: var(--second-offset);
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+  &__author {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font: var(--middle-regular);
+    font-weight: 700;
+    color: var(--color-light);
+    transform: translateX(50px);
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 30px;
+      height: 3px;
+      background-color: var(--color-light);
+      margin-right: var(--second-offset);
+    }
+  }
+  &__image {
+    position: absolute;
+    right: 100px;
+    top: -150px;
+    flex-shrink: 0;
+    width: 500px;
+    height: 950px;
+    overflow: hidden;
+    transform: rotate(15deg);
+    img {
+      position: absolute;
+      max-width: none;
+      top: 0;
+      left: 50%;
+      width: 200%;
+      height: 100%;
+      transform: rotate(-15deg) translateX(-50%);
+      object-fit: cover;
+    }
+  }
+}
