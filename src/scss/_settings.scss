@@ -131,7 +131,7 @@ a {
 }
 
 .logo {
-  font: var(--middle-high-font);
+  font: var(--middle-high-bold);
   line-height: 1;
 }
 
@@ -164,6 +164,12 @@ a {
   }
 }
 
+.title {
+  font: var(--middle-high-bold);
+  color: var(--color-main);
+  margin-bottom: var(--main-offset);
+}
+
 .btn {
   font: var(--small-high-font);
   padding: 22px 47px;
@@ -177,6 +183,16 @@ a {
     }
     &:active {
       background-color: var(--color-accent-active);
+    }
+  }
+  &--secondary {
+    color: var(--color-light);
+    background-color: var(--color-main);
+    &:hover {
+      background-color: var(--color-main-hover);
+    }
+    &:active {
+      background-color: var(--color-black);
     }
   }
 }

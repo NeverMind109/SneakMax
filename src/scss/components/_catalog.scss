@@ -1,0 +1,154 @@
+.catalog {
+  padding: var(--big-offset) 0;
+  &__left {
+    grid-column: 3 span;
+  }
+  &__grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-column: 9 span;
+  }
+  &__subtitle {
+    font: var(--middle-avarage-font);
+    font-family: "introBook", sans-serif;
+    color: var(--color-main);
+    margin-bottom: var(--second-offset);
+  }
+  &__prop {
+    margin-bottom: var(--second-offset);
+  }
+  &__caption {
+    display: block;
+    font: var(--middle-font);
+    font-family: "introBook", sans-serif;
+    color: var(--color-main);
+    margin-bottom: var(--small-offset);
+  }
+  &__prop-checkboxes {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__apply {
+    width: 100%;
+    margin-bottom: var(--second-offset);
+  }
+  &__reset {
+    font: var(--middle-font);
+    color: var(--color-main);
+  }
+  &__more {
+    margin-top: var(--big-offset);
+  }
+}
+.catalog-filters {
+  background-color: var(--color-bg);
+  border-radius: 4px;
+  padding: var(--second-offset);
+  &__btns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.catalog-list {
+  grid-template-columns: repeat(9, 1fr);
+  &__item {
+    grid-column: 3 span;
+  }
+}
+.catalog-price {
+  &__wrapper {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 8px;
+      bottom: 8px;
+      transform: translateX(-50%);
+      width: 1px;
+      height: 34px;
+      background-color: var(--color-bombay);
+    }
+  }
+  &__input {
+    width: 50%;
+    height: 50px;
+    font: var(--middle-font);
+    font-family: "introBook", sans-serif;
+    color: var(--color-main);
+    text-align: center;
+    border: 1px solid var(--color-bombay);
+    background-color: transparent;
+    &:first-child {
+      border-right: none;
+      border-top-left-radius: 4px;
+      border-bottom-left-radius: 4px;
+    }
+    &:last-child {
+      border-left: none;
+      border-top-right-radius: 4px;
+      border-bottom-right-radius: 4px;
+    }
+  }
+  .noUi-horizontal {
+    height: 2px;
+  }
+  .noUi-target {
+    background: var(--color-main);
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+  }
+  .noUi-connect {
+    background: var(--color-main);
+  }
+  .noUi-horizontal .noUi-handle {
+    top: -8px;
+    width: 3px;
+    height: 18px;
+  }
+  .noUi-handle {
+    right: 0;
+    background: var(--color-main);
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    box-shadow: none;
+  }
+  .noUi-handle::after,
+  .noUi-handle::before {
+    display: none;
+  }
+  .noUi-handle-lower {
+    right: -3px;
+  }
+}
+.custom-checkbox {
+  @include custom-checkbox;
+  &__content {
+    font: var(--middle-font);
+    font-family: "introBook", sans-serif;
+    color: var(--color-main);
+    padding-left: 35px;
+    &:before {
+      top: -3px;
+      width: 24px;
+      height: 24px;
+      border-radius: 4px;
+      border-color: var(--colo-cameo);
+    }
+    &:after {
+      top: -3px;
+      width: 24px;
+      height: 24px;
+      background-image: url("../img/check.svg");
+      background-size: 14px 12px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+}
