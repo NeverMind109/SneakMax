@@ -1,0 +1,37 @@
+.team {
+  position: relative;
+  background-color: var(--color-eastbay);
+  padding: var(--big-offset) 0;
+  &__figure {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  &__title {
+    color: var(--color-light);
+  }
+  &__list {
+    position: relative;
+    z-index: 5;
+    gap: var(--main-offset) var(--second-offset);
+  }
+  &__item {
+    grid-column: 4 span;
+    color: var(--color-light);
+  }
+  &__image {
+    overflow: hidden;
+    border-radius: 5px;
+    margin-bottom: var(--second-offset);
+  }
+  &__subtitle {
+    display: block;
+    font: var(--middle-avarage-font);
+    font-weight: 700;
+    margin-bottom: var(--second-offset);
+  }
+  &__post {
+    font: var(--middle-font);
+    font-family: "IntroBook", sans-serif;
+  }
+}
