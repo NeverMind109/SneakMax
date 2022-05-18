@@ -24,13 +24,13 @@
   }
   &__descr {
     font: var(--middle-font);
-    font-family: "introBook", sans-serif;
+    font-family: "IntroBook", sans-serif;
     color: var(--color-light);
   }
   &__quote {
     display: inline-block;
     font: inherit;
-    font-family: "introBook", sans-serif;
+    font-family: "IntroBook", sans-serif;
     margin-bottom: var(--second-offset);
     &::before,
     &::after {
@@ -66,12 +66,12 @@
     img {
       position: absolute;
       max-width: none;
-      top: 0;
+      top: -125px;
       left: 50%;
       width: 200%;
       height: 100%;
       transform: rotate(-15deg) translateX(-50%);
-      object-fit: cover;
+      object-fit: contain;
     }
   }
 }
