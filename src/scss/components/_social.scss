@@ -1,0 +1,20 @@
+.social {
+  display: flex;
+  &__item {
+    &:not(:last-child) {
+      margin-right: var(--second-offset);
+    }
+  }
+  &__link {
+    display: block;
+    width: 44px;
+    height: 44px;
+    @include bg-cover;
+    &--vk {
+      background-image: url("../img/vk.svg");
+    }
+    &--insta {
+      background-image: url("../img/instagram.svg");
+    }
+  }
+}

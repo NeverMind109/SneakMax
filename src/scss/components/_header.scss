@@ -4,6 +4,7 @@
   top: 0;
   z-index: 100;
   width: 100%;
+  background-color: var(--color-eastbay);
   &__container {
     --paddings: 15px;
     position: relative;
@@ -22,9 +23,6 @@
   }
   &__left {
     grid-column: 2 span;
-  }
-  &__logo {
-    color: var(--color-light);
   }
   &__right {
     display: flex;

@@ -1,0 +1,62 @@
+.tooltip {
+  position: relative;
+  &__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background: var(--color-light);
+    box-shadow: 2px 4px 10px rgba(0, 13, 84, 0.2);
+    svg {
+      width: 6px;
+      height: 10px;
+      fill: var(--color-black);
+    }
+  }
+  &__txt {
+    position: absolute;
+    left: -10px;
+    bottom: calc(100% + 14px);
+    z-index: 3;
+    padding: var(--small-offset) var(--second-offset);
+    width: max-content;
+    max-width: 426px;
+    box-shadow: 0 0 29px rgb(0 0 0/ 32%);
+    font: var(--small-high-font);
+    font-family: "IntroBook", sans-serif;
+    color: var(--color-main);
+    background: var(--color-light);
+    text-transform: initial;
+    box-shadow: 4px 8px 20px rgba(0, 13, 84, 0.2);
+    border-radius: 4px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out,
+      visibility 0.3s ease-in-out;
+    &::after {
+      content: "";
+      position: absolute;
+      left: 10px;
+      bottom: -8px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 10px 8px 0;
+      border-color: var(--color-light) transparent transparent transparent;
+      border-radius: 4px;
+    }
+  }
+  &__btn:hover + &__txt {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  &__btn:focus + &__txt {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
