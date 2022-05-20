@@ -1,0 +1,205 @@
+.prod-modal {
+  &__container {
+    width: 1140px;
+    border-radius: 4px;
+    padding: var(--main-offset);
+  }
+  &__close {
+    display: none;
+    right: 20px;
+    top: 20px;
+  }
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--main-offset);
+  }
+  &__bottom {
+    margin-bottom: var(--main-offset);
+  }
+  &__video {
+    width: 100%;
+    height: 450px;
+    iframe {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      border: none;
+    }
+  }
+}
+.modal-slider {
+  margin-right: var(--second-offset);
+  width: calc(50% - (var(--second-offset) / 2));
+  &__container {
+    width: 100%;
+    overflow: hidden;
+    font-size: 0;
+    margin-bottom: var(--second-offset);
+    img {
+      width: 100%;
+      max-height: 460px;
+      object-fit: cover;
+    }
+  }
+}
+.modal-preview {
+  display: grid;
+  grid-template-columns: repeat(6, 70px);
+  gap: var(--second-offset);
+  &__item {
+    height: 75px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: opacity 0.3s ease-in-out;
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    &:hover {
+      opacity: 0.7;
+    }
+    &--active {
+      opacity: 0.7;
+      pointer-events: none;
+    }
+  }
+}
+.modal-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: calc(50% - (var(--second-offset) / 2));
+  padding-right: var(--big-offset);
+  &__top {
+    display: flex;
+    align-items: center;
+    font: var(--middle-font);
+    font-family: "IntroBook", sans-serif;
+    color: var(--color-bombay);
+    margin-bottom: var(--main-offset);
+  }
+  &__vendor {
+    margin-right: var(--main-offset);
+  }
+  &__quantity {
+    span {
+      color: var(--color-main);
+      padding-left: 5px;
+    }
+  }
+  &__title {
+    font: var(--middle-avarage-font);
+    font-family: "IntroBook", sans-serif;
+    line-height: 140%;
+    color: var(--color-main);
+    margin-bottom: var(--second-offset);
+  }
+  &__rate {
+    margin-bottom: var(--second-offset);
+    img {
+      &:not(:last-child) {
+        margin-right: 4px;
+      }
+    }
+  }
+  &__subtitle {
+    display: inline-block;
+    font: var(--middle-font);
+    font-family: "IntroBook", sans-serif;
+    color: var(--color-main);
+    margin-bottom: var(--second-offset);
+  }
+  &__price {
+    display: flex;
+    align-items: center;
+  }
+  &__current-price {
+    font: var(--middle-high-bold);
+    line-height: 30px;
+    color: var(--color-main);
+    margin-right: 32px;
+  }
+  &__old-price {
+    font: var(--middle-font);
+    font-family: "IntroBook", sans-serif;
+    line-height: 16px;
+    color: var(--color-bombay);
+  }
+  &__order {
+    width: 100%;
+    margin-top: auto;
+  }
+  &__note {
+    margin-top: 16px;
+  }
+}
+.modal-sizes {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  &__item {
+    margin-bottom: var(--second-offset);
+    &:not(:last-child) {
+      margin-right: var(--second-offset);
+    }
+  }
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    font: var(--small-high-font);
+    color: var(--color-main);
+    background: var(--color-light);
+    padding: 6px 6px;
+    border: 1px solid var(--color-bombay);
+    border-radius: 4px;
+  }
+}
+.modal-note {
+  &__item {
+    font: var(--small-high-font);
+    font-family: "IntroBook", sans-serif;
+    color: var(--color-bombay);
+    padding-left: 25px;
+    background-image: url("../img/check-list.svg");
+    background-position: left center;
+    background-size: 15px 12px;
+    background-repeat: no-repeat;
+    &:not(:last-child) {
+      margin-bottom: var(--small-offset);
+    }
+  }
+}
+.prod-bottom {
+  display: flex;
+  &__column {
+    width: calc(50% - (var(--second-offset) / 2));
+    &:first-child {
+      margin-right: var(--second-offset);
+    }
+  }
+  &__title {
+    font: var(--middle-avarage-font);
+    font-family: "IntroBook", sans-serif;
+    color: var(--color-main);
+    margin-bottom: var(--second-offset);
+  }
+  &__descr {
+    max-width: 450px;
+    font: var(--middle-font);
+    font-family: "IntroBook", sans-serif;
+    color: var(--color-main);
+  }
+}
+.prod-chars {
+  &__item {
+    max-width: none;
+    line-height: 16px;
+    margin-bottom: var(--small-offset);
+  }
+}
