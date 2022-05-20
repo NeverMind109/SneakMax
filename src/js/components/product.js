@@ -48,12 +48,12 @@ if (catalogList) {
                   <img src="${item.mainImage}" alt="${item.title}" />
                   <div class="product__buttons">
                     <button
-                      class="btn-reset product__look product__button" data-graph-path="prod-modal" data-id = ${
+                      class="btn-reset product__look product__button" data-graph-path="prod-modal" data-id=${
                         item.id
                       } aria-label="Показать информацию о товаре"
                     ></button>
                     <button
-                      class="btn-reset product__button"
+                      class="btn-reset product__button" data-id=${item.id}
                       aria-label="Добавить товар в корзину"
                     >
                       <svg>
@@ -75,6 +75,8 @@ if (catalogList) {
         productTitle.forEach((el) => {
           $clamp(el, { clamp: "22px" });
         });
+
+        cartLogic();
 
         const modal = new GraphModal({
           isOpen: (modal) => {
@@ -222,3 +224,75 @@ if (catalogList) {
     }
   });
 }
+
+// работа корзины
+let price = 0;
+const miniCartList = document.querySelector(".mini-cart__list");
+
+const priceWithoutSpaces = (str) => {
+  return str.replace(/\s/g, "");
+};
+
+const plusFullPrice = (currentPrice) => {
+  return (price += currentPrice);
+};
+
+const minusFullPrice = (currentPrice) => {
+  return (price -= currentPrice);
+};
+
+const loadCartData = (id = 1) => {
+  fetch("../data/data.json")
+    .then((response) => {
+      return response.json();
+    })
+    .then((data) => {
+      for (let dataItem of data) {
+        if (dataItem.id == id) {
+          console.log(dataItem);
+          miniCartList.insertAdjacentHTML(
+            "afterbegin",
+            `
+              <li class="mini-cart__item">
+                <article class="mini-cart__product mini-product">
+                  <div class="mini-product__image">
+                    <img src="img/product-image.jpg" alt="" />
+                  </div>
+                  <div class="mini-product__content">
+                    <div class="mini-product__text">
+                      <h3 class="mini-product__title">
+                        Женские кроссовки Puma Force 1 Shadow
+                      </h3>
+                      <span class="mini-product__price">8 678 ₽ </span>
+                    </div>
+                    <button
+                      class="btn-reset mini-product__delete"
+                      aria-label="Удалить товар"
+                    >
+                      <svg>
+                        <use xlink:href="img/sprite.svg#trash"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </article>
+              </li>
+            `
+          );
+        }
+      }
+    });
+  // .then(() => {});
+};
+
+const cartLogic = () => {
+  const productBtn = document.querySelectorAll(".add-to-cart-btn");
+
+  productBtn.forEach((el) => {
+    el.addEventListener("click", (e) => {
+      const id = e.currentTarget.dataset.id;
+      loadCartData(id);
+
+      e.currentTarget.classList.add("product__btn--disabled");
+    });
+  });
+};

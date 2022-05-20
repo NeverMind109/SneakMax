@@ -122,4 +122,127 @@
       </div>
     </div>
   </div>
+  <div
+    class="graph-modal__container cart-modal__container"
+    role="dialog"
+    aria-modal="true"
+    data-graph-target="cart-modal"
+  >
+    <button
+      class="graph-modal__close cart-modal__close js-modal-close"
+      aria-label="Закрыть модальное окно"
+    ></button>
+    <div class="graph-modal__content cart-modal__content">
+      <div class="cart-modal__top">
+        <h2 class="cart-modal__title">Оформление заказа</h2>
+        <span class="cart-modal__order-number">Заказ 3456 67</span>
+      </div>
+      <div class="cart-modal-order">
+        <div class="cart-modal-order__top">
+          <span class="cart-modal-order__text cart-modal-order__quantity"
+            >Товаров в заказе:<span>3 шт</span></span
+          >
+          <span class="cart-modal-order__text cart-modal-order__summ"
+            >Общая сумма заказа:<span>25 789 ₽</span></span
+          >
+        </div>
+        <div class="cart-modal-order__content">
+          <button class="btn-reset cart-modal-order__show">
+            Состав заказа
+            <svg class="">
+              <use xlink:href="img/sprite.svg#angle"></use>
+            </svg>
+          </button>
+          <ul class="list-reset cart-modal-order__list">
+            <li class="cart-modal-order__item">
+              <article class="cart-modal-order__product cart-modal-product">
+                <div class="cart-modal-product__image">
+                  <img src="img/product-image.jpg" alt="" />
+                </div>
+                <div class="cart-modal-product__content">
+                  <div class="cart-modal-product__text">
+                    <h3 class="cart-modal-product__title">
+                      Женские кроссовки Puma Force 1 Shadow
+                    </h3>
+                    <span class="cart-modal-product__price">190 789 ₽ </span>
+                  </div>
+                  <button
+                    class="btn-reset cart-modal-product__delete"
+                    aria-label="Удалить товар"
+                  >
+                    Удалить
+                  </button>
+                </div>
+              </article>
+            </li>
+            <li class="cart-modal-order__item">
+              <article class="cart-modal-order__product cart-modal-product">
+                <div class="cart-modal-product__image">
+                  <img src="img/product-image.jpg" alt="" />
+                </div>
+                <div class="cart-modal-product__content">
+                  <div class="cart-modal-product__text">
+                    <h3 class="cart-modal-product__title">
+                      Женские кроссовки Puma Force 1 Shadow
+                    </h3>
+                    <span class="cart-modal-product__price">190 789 ₽ </span>
+                  </div>
+                  <button
+                    class="btn-reset cart-modal-product__delete"
+                    aria-label="Удалить товар"
+                  >
+                    Удалить
+                  </button>
+                </div>
+              </article>
+            </li>
+            <li class="cart-modal-order__item">
+              <article class="cart-modal-order__product cart-modal-product">
+                <div class="cart-modal-product__image">
+                  <img src="img/product-image.jpg" alt="" />
+                </div>
+                <div class="cart-modal-product__content">
+                  <div class="cart-modal-product__text">
+                    <h3 class="cart-modal-product__title">
+                      Женские кроссовки Puma Force 1 Shadow
+                    </h3>
+                    <span class="cart-modal-product__price">190 789 ₽ </span>
+                  </div>
+                  <button
+                    class="btn-reset cart-modal-product__delete"
+                    aria-label="Удалить товар"
+                  >
+                    Удалить
+                  </button>
+                </div>
+              </article>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <form class="cart-modal__form" action="#">
+        <input
+          class="input-reset input cart-modal__input"
+          type="text"
+          placeholder="Ваше имя"
+          required
+        />
+        <input
+          class="input-reset input cart-modal__input"
+          type="tel"
+          placeholder="Номер телефона"
+          required
+        />
+        <input
+          class="input-reset input cart-modal__input"
+          type="email"
+          placeholder="E-mail"
+          required
+        />
+        <buttom class="btn-reset btn btn--primary cart-modal__order"
+          >Оформить заказ</buttom
+        >
+      </form>
+    </div>
+  </div>
 </div>

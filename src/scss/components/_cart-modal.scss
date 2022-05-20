@@ -1,0 +1,125 @@
+.cart-modal {
+  &__container {
+    width: 580px;
+    border-radius: 4px;
+    padding: var(--main-offset);
+  }
+  &__close {
+    display: none;
+  }
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--main-offset);
+  }
+  &__title {
+    font: var(--middle-regular);
+    font-weight: 700;
+    color: var(--color-main);
+  }
+  &__order-number {
+    font: var(--small-high-font);
+    font-family: "IntroBook", sans-serif;
+    line-height: 14px;
+    color: var(--color-bombay);
+  }
+  &__input {
+    background: #f7f7f7;
+    margin-bottom: var(--small-offset);
+    &:last-child {
+      margin-bottom: 30px;
+    }
+  }
+  &__order {
+    display: inline-block;
+    padding: 21px 56px;
+  }
+}
+.cart-modal-order {
+  background: var(--color-light);
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  padding: 30px;
+  margin-bottom: var(--main-offset);
+  &__text {
+    display: block;
+    font: var(--middle-font);
+    font-family: "IntroBook", sans-serif;
+    line-height: 16px;
+    color: var(--color-bombay);
+    margin-bottom: var(--second-offset);
+    span {
+      font-family: "Intro", sans-serif;
+      font-weight: 700;
+      color: var(--color-main);
+      padding-left: 7px;
+    }
+  }
+  &__show {
+    display: inline-flex;
+    align-items: center;
+    font: var(--middle-font);
+    font-family: "IntroBook", sans-serif;
+    line-height: 16px;
+    color: var(--color-main);
+    margin-bottom: var(--second-offset);
+    svg {
+      width: 7px;
+      height: 7px;
+      fill: currentColor;
+      object-fit: cover;
+      margin-left: 5px;
+    }
+  }
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 14px;
+    }
+  }
+}
+.cart-modal-product {
+  display: flex;
+  align-items: center;
+  padding: 16px 0;
+  &__image {
+    flex-shrink: 0;
+    width: 80px;
+    height: 45px;
+    margin-right: var(--small-offset);
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__content {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+  }
+  &__text {
+    max-width: 290px;
+    margin-right: auto;
+  }
+  &__title {
+    font: var(--small-high-font);
+    font-family: "IntroBook", sans-serif;
+    color: var(--color-main);
+    line-height: 20px;
+    margin-bottom: var(--small-offset);
+  }
+  &__price {
+    font: var(--middle-regular);
+    font-weight: 700;
+    color: var(--color-main);
+  }
+  &__delete {
+    font: var(--small-high-font);
+    font-family: "IntroBook", sans-serif;
+    line-height: 14px;
+    color: var(--color-bombay);
+    margin-left: 7px;
+  }
+}
